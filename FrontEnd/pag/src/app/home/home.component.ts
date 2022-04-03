@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
 
     gsap.to(this.text.nativeElement, {
       scrollTrigger: {
-        scrub: 8,
+        scrub: 10,
       },
       duration: 1.1,
       x: -2900,

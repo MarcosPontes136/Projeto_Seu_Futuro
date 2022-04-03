@@ -9,13 +9,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ContatoComponent } from './contato/contato.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ExploreComponent } from './explore/explore.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    ContatoComponent
+    ContatoComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,
