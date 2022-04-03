@@ -1,0 +1,29 @@
+body{
+    background:#1c0522;
+    background-attachment: fixed;
+    flex-shrink: 0;
+    padding: 50px;
+}
+
+header ul li a {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+
+    &:hover, &:active{
+        background: white;
+        color: black;
+    }
+}
+.line{
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 auto;
+    font-size: 3em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

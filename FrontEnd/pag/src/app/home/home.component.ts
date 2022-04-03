@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   @ViewChild('btn', { static: true}) btn: ElementRef<HTMLDivElement>;
   @ViewChild('mountains_front', { static: true}) mountains_front: ElementRef<HTMLDivElement>;
 
-
   constructor(@Inject(DOCUMENT) private doument: Document) { 
   }
 
