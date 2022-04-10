@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
   @ViewChild('text', { static: true}) text: ElementRef<HTMLDivElement>;
   @ViewChild('btn', { static: true}) btn: ElementRef<HTMLDivElement>;
   @ViewChild('mountains_front', { static: true}) mountains_front: ElementRef<HTMLDivElement>;
+  @ViewChild('sec', { static: true}) sec: ElementRef<HTMLDivElement>;
+
 
   constructor(@Inject(DOCUMENT) private doument: Document) { 
   }
@@ -31,6 +33,16 @@ export class HomeComponent implements OnInit {
   }
 
   initScrollAnimations(): void{
+    gsap.to(this.sec.nativeElement, {
+      scrollTrigger: {
+        scrub: true,
+        toggleActions: "restart pause reverse pause",
+      },
+      opacity: 1,
+      duration: 1
+      
+    });
+
     gsap.to(this.stars.nativeElement, {
       scrollTrigger: {
         scrub: 15,
