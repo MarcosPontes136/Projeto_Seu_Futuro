@@ -1,7 +1,7 @@
 <h1><center>Projeto</center></h1>
 <h2><center>Talvez seu futuro esteja nas estrelas (ALPHA) </center></h2>
 <div align="center">
-    <img src="FrontEnd/pag/src/assets/PessoalPresentacao.gif" width="500" height="350">
+    <img src="FrontEnd/pag/src/assets/PessoalPresentacao.gif" width="700" height="350">
 </div>
 
 <p><br>
