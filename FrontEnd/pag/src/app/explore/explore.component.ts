@@ -32,6 +32,6 @@ export class ExploreComponent implements OnInit {
         scrub: 15,
       },
       x: 500,
-    });*/
+    });*/ 
   }
 }

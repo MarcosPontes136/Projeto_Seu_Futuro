@@ -1,18 +1,112 @@
+*{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
 body{
     min-height: 100vh;
     background: linear-gradient( #7597de, #1c0522);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.cube{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
 
+    & div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    & div span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgb(255, 255, 255), black);
+        transform: rotateY(calc(90deg * var(--i))) translateZ( 150px); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+    }
+    & div span h2 {
+        position: absolute;
+        font-size: 5em;
+        color: black;
+        transform: translateZ(50px);
+    }
+    & div span h2:nth-child(1) {
+        transform: translateZ(0) translateY(20px);
+        color: rgba(0,0,0,0.1);
+        filter: blur(2px); 
+    
+    }
+}
 
-/*#stars {                                                    //movimento infinito das estrelas
+@keyframes animate {
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+    
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: white;
+    transform: rotateX(90deg) translateZ(150px);
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        background: black;
+        transform: translateZ(-380px);
+        filter: blur(20px);
+        box-shadow: 0 0 120px black,
+        0 0 200px black,
+        0 0 300px rgb(15, 15, 15),
+        0 0 400px rgb(30, 29, 29),
+        0 0 500px rgb(42, 40, 40);
+    }
+}
+
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#stars {                                                    //movimento infinito das estrelas
     animation: starsanin 10s ease-in-out infinite alternate;
 }
-    @keyframes starsanin {
-        from{
-            transform:translateX(-30px);
-        }
-        to{
-            transform: translateX(20px);
-        }
-    }*/
+@keyframes starsanin {
+    from{
+        transform:translateX(-30px);
+    }
+    to{
+        transform: translateX(20px);
+    }
+}
